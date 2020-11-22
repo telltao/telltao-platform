@@ -15,7 +15,7 @@ public class ListsTest {
         var list1 = new LinkedList<>();
         list.add("qwe");
         list.add(123);
-        //对list进行翻转
+        //对list进行翻转的
         Collections.reverse(list);
         Collections.copy(list,list1);
         list.forEach(item ->{
