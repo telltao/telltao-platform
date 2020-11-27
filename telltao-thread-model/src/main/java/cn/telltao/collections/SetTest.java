@@ -28,7 +28,7 @@ public class SetTest {
 
     static void treeSet() {
         //基于 TreeMap的实现
-        //TreeSet 是二叉树实现的,Treeset中的数据是自动排好序的，不允许放入null值。
+        //TreeSet(有序) 是二叉树实现的,Treeset中的数据是自动排好序的，不允许放入null值。
         TreeSet treeSet = new TreeSet();
         //此add remove contains 操作的算法时间复杂度为 对数阶O(logN) 有且只有一个while循环
         System.out.println(" treeSet add  " + treeSet.add("qwe"));
@@ -44,5 +44,6 @@ public class SetTest {
     public static void main(String [] args) {
         hashSet();
         treeSet();
+
     }
 }
