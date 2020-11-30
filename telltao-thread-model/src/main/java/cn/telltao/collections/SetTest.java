@@ -1,6 +1,7 @@
 package cn.telltao.collections;
 
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.TreeSet;
 
 /**
@@ -9,8 +10,8 @@ import java.util.TreeSet;
  *  他们不允许使用null元素
  *  他们在创建时拒绝重复的元素 也就是说 多个重复的会被覆盖
  *  HashSet  不可重复的集合
- *  TreeSet
- *  AbstractSet: 抽象类的
+ *  TreeSet  有序的集合
+ *  LinkHashSet 有序的集合
  *
  * @Date 2020/11/26 15:54
  */
@@ -40,10 +41,36 @@ public class SetTest {
 
     }
 
+    /**
+     * LinkHashSet(HashSet+LinkedHashMap)
+     * 它是一组有序的集合
+     * 适用场景: 退货 发货 需要按照顺序发货 按照顺序退货等
+     *
+     * Set接口的哈希表和链表实现，具有可预测的迭代顺序。
+     * 此实现与HashSet不同之处在于，它维护贯穿其所有条目的双向链接列表。
+     * 此链表定义了迭代顺序，即将元素插入集合的顺序（ insert-order ）。
+     * 请注意，如果将元素重新插入到集合中，则插入顺序不会受到影响。
+     * （元件e重新插入一组s如果s.add(e) ，当被调用s.contains(e)将返回true调用之前立即）。
+     *
+     */
+
+    static void linkHashSet() {
+
+        LinkedHashSet hashSet = new LinkedHashSet();
+        //不可重复
+        hashSet.add("qwe");
+        hashSet.add("qwe");
+        System.out.println("linkHashSet  " + hashSet.size());
+        System.out.println("linkHashSet  " + hashSet.remove("qwe"));
+
+
+    }
+
 
     public static void main(String [] args) {
         hashSet();
         treeSet();
+        linkHashSet();
 
     }
 }
