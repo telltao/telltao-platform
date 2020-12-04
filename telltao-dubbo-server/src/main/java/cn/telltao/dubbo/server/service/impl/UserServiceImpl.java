@@ -15,7 +15,7 @@ import java.util.List;
  *
  * @Date 2020/12/1 16:40
  */
-@Service
+@Service(interfaceClass = UserService.class)
 @Component
 public class UserServiceImpl  implements UserService {
 

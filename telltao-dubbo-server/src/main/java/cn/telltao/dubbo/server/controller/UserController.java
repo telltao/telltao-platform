@@ -1,6 +1,7 @@
 package cn.telltao.dubbo.server.controller;
 
 import cn.telltao.dubbo.server.service.UserService;
+import com.alibaba.dubbo.config.annotation.Reference;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
 
 
-    @Autowired
+    @Reference
     UserService userService;
     /**
      * 跳转到主页面
